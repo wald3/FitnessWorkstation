@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DbFitness.Models
 {
@@ -14,7 +10,6 @@ namespace DbFitness.Models
         public string EquipmentName { get; set; }
         public string EquipmentUseRules { get; set; }
         public string EquipmentPurpose { get; set; }
-
-        public virtual SportEquipment Equipment { get; set; }
+        public SportEquipment Equipment { get; set; }
     }
 }

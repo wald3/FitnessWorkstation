@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DbFitness.Models
 {
@@ -11,11 +7,11 @@ namespace DbFitness.Models
         [Key]
         public int Id { get; set; }
         public bool IsActive { get; set; }
+        public PersonInfo Bio { get; set; }
+        public Abonement Abonement { get; set; }
 
+        // One-To-Many relation
         public int ClubId { get; set; }
         public Club Club { get; set; }
-
-        public virtual PersonInfo Bio { get; set; }
-        public virtual Abonement Abonement { get; set; }
     }
 }

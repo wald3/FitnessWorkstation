@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
@@ -13,5 +10,8 @@ namespace DbFitness.Models
         public DateTime PurchaseDate { get; set; }
         public int Amount { get; set; }
         public int Price { get; set; }
+
+        public int ClubId { get; set; }
+        public Club Club { get; set; }
     }
 }

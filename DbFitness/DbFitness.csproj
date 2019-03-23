@@ -51,9 +51,14 @@
     <Compile Include="Configurations\AbonementConfig.cs" />
     <Compile Include="Configurations\AbonementTypeConfig.cs" />
     <Compile Include="Configurations\AdressConfig.cs" />
-    <Compile Include="Configurations\AdressRelationConfig.cs" />
     <Compile Include="Configurations\ClientConfig.cs" />
     <Compile Include="Configurations\ClubConfig.cs" />
+    <Compile Include="Configurations\EmployeeConfig.cs" />
+    <Compile Include="Configurations\EquipmentInfoConfig.cs" />
+    <Compile Include="Configurations\PersonInfoConfig.cs" />
+    <Compile Include="Configurations\PhoneConfig.cs" />
+    <Compile Include="Configurations\PositionConfig.cs" />
+    <Compile Include="Configurations\SportEquipmentConfig.cs" />
     <Compile Include="Context\ApplicationContext.cs" />
     <Compile Include="Migrations\201903230159242_AddAbonement.cs" />
     <Compile Include="Migrations\201903230159242_AddAbonement.Designer.cs">
@@ -63,10 +68,9 @@
     <Compile Include="Models\Abonement.cs" />
     <Compile Include="Models\AbonementType.cs" />
     <Compile Include="Models\Adress.cs" />
-    <Compile Include="Models\AdressRelation.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Club.cs" />
-    <Compile Include="Models\Empolyee.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EquipmentInfo.cs" />
     <Compile Include="Models\PersonInfo.cs" />
     <Compile Include="Models\Phone.cs" />

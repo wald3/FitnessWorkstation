@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DbFitness.Models
 {
@@ -11,14 +7,11 @@ namespace DbFitness.Models
         [Key]
         public int AbonementId { get; set; }
         public Types Type { get; set; }
-
-        public Abonement Abonement { get; set; }
-        
     }
 
      public enum Types
-    {
-         Year    = 365,
+     {
+         Year = 365,
          MonthSix = 365 / 2,
          MonthThree = 365 / 4,
          MonthOne = 365 / 12,

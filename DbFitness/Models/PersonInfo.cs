@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DbFitness.Models
 {
@@ -15,7 +11,5 @@ namespace DbFitness.Models
         public int Age { get; set; }
         public Adress Adress { get; set; }
         public Phone Phone { get; set; }
-
-        public Client Client { get; set; }
     }
 }

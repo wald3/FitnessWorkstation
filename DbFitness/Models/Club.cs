@@ -10,6 +10,7 @@ namespace DbFitness.Models
         public int PriceForOneVisit { get; set; }
         public virtual Adress Adress { get; set; }
 
+        // One-To-Many relations
         public virtual ICollection<SportEquipment> Equipments { get; set; }
         public virtual ICollection<Client> Clients { get; set; }
     }
