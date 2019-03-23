@@ -9,20 +9,10 @@ namespace DbFitness.Configurations
     {
         public ClientConfig()
         {
-            this.ToTable("tbl_abonements").HasKey(c => c.Id);
+            this.ToTable("tbl_clients").HasKey(c => c.Id);
             this.Property(c => c.Id).HasColumnName("cln_client_id")
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(c => c.IsActive).HasColumnName("cln_client_isActive").IsRequired();
-
-            this.HasRequired<Club>(s => s.Club)
-                .WithMany(g => g.Clients)
-                .HasForeignKey<int?>(s => s.ClubId);
-
-            this.HasRequired<PersonInfo>(c => c.Bio)
-                .WithRequiredDependent(pi => pi.Client);
-
-            this.HasRequired<Abonement>(c => c.Abonement)
-                .WithRequiredDependent(a => a.Client);
         }
     }
 }

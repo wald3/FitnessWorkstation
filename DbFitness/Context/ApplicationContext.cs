@@ -12,7 +12,7 @@ namespace DbFitness
         public DbSet<Adress> Adreses { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Club> Clubs { get; set; }
-        public DbSet<Empolyee> Empolyes { get; set; }
+        public DbSet<Employee> Empolyes { get; set; }
         public DbSet<EquipmentInfo> EquipmentInfo { get; set; }
         public DbSet<PersonInfo> PersonInfo { get; set; }
         public DbSet<Phone> Phones { get; set; }

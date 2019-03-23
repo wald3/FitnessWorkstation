@@ -17,10 +17,6 @@ namespace DbFitness.Configurations
             this.Property(c => c.Id).HasColumnName("cln_club_id")
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(c => c.PriceForOneVisit).HasColumnName("cln_club_priceForOneVisit");
-
-            this.HasMany<Client>(c => c.Clients)
-                .WithRequired(s => s.Club)
-                .HasForeignKey<int?>(s => s.ClubId);
         }
     }
 }

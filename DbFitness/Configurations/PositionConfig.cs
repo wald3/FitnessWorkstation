@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace DbFitness.Configurations
 {
-    class AdressRelationConfig : EntityTypeConfiguration<AdressRelation>
+    class PositionConfig : EntityTypeConfiguration<Position>
     {
-        public AdressRelationConfig()
+        public PositionConfig()
         {
-            this.ToTable("tbl_adressRelation").HasKey(a => a.AdressId);
-            this.Property(a => a.AdressId).HasColumnName("cln_adress_id")
+            this.ToTable("tbl_positions").HasKey(p => p.Id);
+            this.Property(p => p.Id).HasColumnName("cln_position_id")
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(p => p.CurrentPosition).HasColumnName("cln_position_currentPosition");
         }
     }
 }

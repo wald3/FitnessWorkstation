@@ -12,7 +12,7 @@ namespace DbFitness.Models
         public int Id { get; set; }
         public Positions CurrentPosition { get; set; }
 
-        public virtual Empolyee Empolyee {get; set; }
+        public virtual Employee Empolyee {get; set; }
     }
 
     public enum Positions
@@ -20,7 +20,6 @@ namespace DbFitness.Models
         Administrator = 1,
         TrainerO = 4,
         TrainerE = 3,
-        Cleaner = 3
-        
+        Cleaner = 3   
     }
 }
