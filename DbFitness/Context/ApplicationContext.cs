@@ -25,7 +25,16 @@ namespace DbFitness
         protected override void OnModelCreating(DbModelBuilder optionsBuilder)
         {
             optionsBuilder.Configurations.Add(new AbonementConfig());
-            //throw new UnintentionalCodeFirstException();
+            optionsBuilder.Configurations.Add(new AbonementTypeConfig());
+            optionsBuilder.Configurations.Add(new AdressConfig());
+            optionsBuilder.Configurations.Add(new ClientConfig());
+            optionsBuilder.Configurations.Add(new ClubConfig());
+            optionsBuilder.Configurations.Add(new EmployeeConfig());
+            optionsBuilder.Configurations.Add(new EquipmentInfoConfig());
+            optionsBuilder.Configurations.Add(new PersonInfoConfig());
+            optionsBuilder.Configurations.Add(new PhoneConfig());
+            optionsBuilder.Configurations.Add(new PositionConfig());
+            optionsBuilder.Configurations.Add(new SportEquipmentConfig());
         }
     }
 }
