@@ -10,3 +10,5 @@ C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.csproj.
 C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.csproj.CopyComplete
 C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.dll
 C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.pdb
+C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.Migrations.AddConfigs.resources
+C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.csproj.GenerateResource.cache
