@@ -48,44 +48,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\AbonementConfig.cs" />
-    <Compile Include="Configurations\AbonementTypeConfig.cs" />
-    <Compile Include="Configurations\AdressConfig.cs" />
-    <Compile Include="Configurations\ClientConfig.cs" />
     <Compile Include="Configurations\ClubConfig.cs" />
-    <Compile Include="Configurations\EmployeeConfig.cs" />
-    <Compile Include="Configurations\EquipmentInfoConfig.cs" />
+    <Compile Include="Configurations\PersonConfig.cs" />
     <Compile Include="Configurations\PersonInfoConfig.cs" />
     <Compile Include="Configurations\PhoneConfig.cs" />
-    <Compile Include="Configurations\PositionConfig.cs" />
-    <Compile Include="Configurations\SportEquipmentConfig.cs" />
-    <Compile Include="Context\ApplicationContext.cs" />
-    <Compile Include="Migrations\201903240134490_AddConfigs.cs" />
-    <Compile Include="Migrations\201903240134490_AddConfigs.Designer.cs">
-      <DependentUpon>201903240134490_AddConfigs.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Context\DbFitnessСontext.cs" />
+    <Compile Include="Initializer\DbInitializer.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Abonement.cs" />
-    <Compile Include="Models\AbonementType.cs" />
-    <Compile Include="Models\Adress.cs" />
-    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Club.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\EquipmentInfo.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonInfo.cs" />
     <Compile Include="Models\Phone.cs" />
-    <Compile Include="Models\Position.cs" />
-    <Compile Include="Models\SportEquipment.cs" />
+    <Compile Include="Models\Table.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903240134490_AddConfigs.resx">
-      <DependentUpon>201903240134490_AddConfigs.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

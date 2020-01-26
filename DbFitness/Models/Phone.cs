@@ -1,14 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class Phone
+    public class Phone : Table
     {
-        [Key]
-        public int Id { get; set; }
-        public string PhoneOperator { get; set; }
-        public int CountryCode { get; set; }
-        public int PhoneCode { get; set; }
-        public int PhoneNumber { get; set; }
+        public int CountryCode  { get; set; }
+        public int OperatorCode { get; set; }
+        public int PhoneNumber  { get; set; }
+        public int? PersonInfoId { get; set; }
+        public virtual PersonInfo PersonInfo { get; set; }
     }
 }

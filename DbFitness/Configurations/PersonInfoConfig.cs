@@ -7,10 +7,15 @@ namespace DbFitness.Configurations
     {
         public PersonInfoConfig()
         {
-            this.ToTable("tbl_personeInfos").HasKey(pi => pi.Id);
-            this.Property(pi => pi.FisrtName).HasColumnName("cln_personInfo_firstName");
-            this.Property(pi => pi.SecondName).HasColumnName("cln_personInfo_secondName");
-            this.Property(pi => pi.Age).HasColumnName("cln_personInfo_age");
+            this.HasRequired<Person>(pi => pi.Person)
+                .WithOptional(p => p.PersonInfo)
+                .WillCascadeOnDelete(false);
+
+            this.HasOptional(pi => pi.Phone)
+                .WithRequired(p => p.PersonInfo);
+
+            this.HasRequired(pi => pi.Address);
+            
         }
     }
 }

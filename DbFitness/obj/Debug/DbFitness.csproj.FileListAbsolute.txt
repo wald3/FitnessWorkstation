@@ -12,3 +12,14 @@ C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.dll
 C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.pdb
 C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.Migrations.AddConfigs.resources
 C:\Users\Vladislav\Source\Repos\FitnessAWP\DbFitness\obj\Debug\DbFitness.csproj.GenerateResource.cache
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\bin\Debug\DbFitness.dll.config
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\bin\Debug\DbFitness.dll
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\bin\Debug\DbFitness.pdb
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\bin\Debug\EntityFramework.dll
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\bin\Debug\EntityFramework.xml
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\obj\Debug\DbFitness.csprojAssemblyReference.cache
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\obj\Debug\DbFitness.csproj.CopyComplete
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\obj\Debug\DbFitness.dll
+C:\Users\Vladislav\Documents\GIT Repos\FitnessWorkstation\DbFitness\obj\Debug\DbFitness.pdb

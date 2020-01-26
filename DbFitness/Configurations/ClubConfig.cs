@@ -1,5 +1,4 @@
 ﻿using DbFitness.Models;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace DbFitness.Configurations
@@ -8,10 +7,11 @@ namespace DbFitness.Configurations
     {
         public ClubConfig()
         {
-            this.ToTable("tbl_clubs").HasKey(c => c.Id);
-            this.Property(c => c.Id).HasColumnName("cln_club_id")
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(c => c.PriceForOneVisit).HasColumnName("cln_club_priceForOneVisit");
+            this.HasMany<Person>(s => s.Persons)
+                .WithRequired(p => p.Club)
+                .HasForeignKey(p => p.ClubId);
+
+            this.HasOptional(c => c.Address);
         }
     }
 }

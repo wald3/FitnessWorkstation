@@ -1,15 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class PersonInfo
+    public class PersonInfo : Table
     {
-        [Key]
-        public int Id { get; set; }
-        public string FisrtName { get; set; }
+        public string FirstName  { get; set; }
         public string SecondName { get; set; }
         public int Age { get; set; }
-        public Adress Adress { get; set; }
-        public Phone Phone { get; set; }
+        public virtual Phone Phone { get; set; }
+        public virtual Address Address { get; set; }
+
+        public int? PersonId { get; set; }
+        public virtual Person Person { get; set; }
     }
 }
