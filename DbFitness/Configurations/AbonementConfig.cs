@@ -8,13 +8,11 @@ namespace DbFitness.Configurations
     {
         public AbonementConfig()
         {
-            this.HasRequired<User>(a => a.Client);
-
             this.ToTable("abonement");
             this.Property(c => c.Id).HasColumnName("abonement_id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(c => c.isActive).HasColumnName("abonement_is_active").IsRequired();
             this.Property(c => c.Price).HasColumnName("abonement_price").IsRequired();
-            this.Property(c => c.PurchaseDate).HasColumnName("abonement_purchase_date_utc").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
+            this.Property(c => c.PurchaseDate).HasColumnName("abonement_purchase_date_utc").IsOptional().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
             this.Property(c => c.Type).HasColumnName("abonement_type").IsRequired();
         }
     }

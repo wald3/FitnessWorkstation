@@ -8,7 +8,7 @@ namespace DbFitness.Configurations
     {
         public PhoneConfig()
         {
-            this.HasRequired<User>(p => p.PhoneUser);
+            //this.HasRequired<UserInfo>(p => p.PhoneUser);
 
             this.ToTable("phone");
             this.Property(c => c.Id).HasColumnName("phone_id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);

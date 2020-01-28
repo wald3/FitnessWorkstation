@@ -21,21 +21,23 @@ namespace DbFitness.Initializer
                 {
                     RegistrationDate = DateTime.UtcNow,
                     Abonement = null,
-
-                    FirstName = "Name1",
-                    SecondName = "Surname1",
-                    Age = 35,
-                    Phone = new Phone
+                    UserInfo = new UserInfo
                     {
-                        CountryCode = 375,
-                        OperatorCode = 29,
-                        PhoneNumber = 1234567
-                    },
-                    Address = new Address
-                    {
-                        Country = "Belarus",
-                        StreetName = "Belinskogo",
-                        Housing = 30
+                        FirstName = "Name1",
+                        SecondName = "Surname1",
+                        Age = 35,
+                        Phone = new Phone
+                        {
+                            CountryCode = 375,
+                            OperatorCode = 29,
+                            PhoneNumber = 1234567
+                        },
+                        Address = new Address
+                        {
+                            Country = "Belarus",
+                            StreetName = "Belinskogo",
+                            Housing = 30
+                        }
                     }
                 },
                 new Client
@@ -43,20 +45,23 @@ namespace DbFitness.Initializer
                     RegistrationDate = DateTime.UtcNow,
                     Abonement = new Abonement(AbonementType.MonthOne),
 
-                    FirstName = "Name2",
-                    SecondName = "Surname2",
-                    Age = 20,
-                    Phone = new Phone
+                    UserInfo = new UserInfo
                     {
-                        CountryCode = 375,
-                        OperatorCode = 29,
-                        PhoneNumber = 9876543
-                    },
-                    Address = new Address
-                    {
-                        Country = "Belarus",
-                        StreetName = "pr. Pobeditelei",
-                        Housing = 51
+                        FirstName = "Name2",
+                        SecondName = "Surname2",
+                        Age = 20,
+                        Phone = new Phone
+                        {
+                            CountryCode = 375,
+                            OperatorCode = 29,
+                            PhoneNumber = 9876543
+                        },
+                        Address = new Address
+                        {
+                            Country = "Belarus",
+                            StreetName = "pr. Pobeditelei",
+                            Housing = 51
+                        }
                     }
                 }
             };
@@ -68,20 +73,23 @@ namespace DbFitness.Initializer
                     EnrollmentDate = DateTime.UtcNow,
                     LastPayoutDate = null,
 
-                    FirstName = "Name3",
-                    SecondName = "Surname3",
-                    Age = 50,
-                    Phone = new Phone
+                    UserInfo = new UserInfo
                     {
-                        CountryCode = 375,
-                        OperatorCode = 29,
-                        PhoneNumber = 2345678
-                    },
-                    Address = new Address
-                    {
-                        Country = "Belarus",
-                        StreetName = "J. Kolasa",
-                        Housing = 24
+                        FirstName = "Name3",
+                        SecondName = "Surname3",
+                        Age = 50,
+                        Phone = new Phone
+                        {
+                            CountryCode = 375,
+                            OperatorCode = 29,
+                            PhoneNumber = 2345678
+                        },
+                        Address = new Address
+                        {
+                            Country = "Belarus",
+                            StreetName = "J. Kolasa",
+                            Housing = 24
+                        }
                     }
                 }
             };

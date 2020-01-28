@@ -9,7 +9,7 @@ namespace DbFitness.Models
     public class Abonement : Table
     {
         private readonly int PriceForOneVisit = 5;
-        public DateTime PurchaseDate { get; set; }
+        public DateTime? PurchaseDate { get; set; }
         public int Price { get; set; }
         public bool isActive { get; set; }
         public AbonementType Type { get; set; }
@@ -19,7 +19,6 @@ namespace DbFitness.Models
             Price = (int)t * PriceForOneVisit;
             isActive = true;
         }
-        public virtual Client Client { get; set; }
     }
     public enum AbonementType
     {

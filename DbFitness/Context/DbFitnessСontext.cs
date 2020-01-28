@@ -13,10 +13,11 @@ namespace DbFitness.Context
 
         public DbSet<Club> Clubs { get; set; }
         public DbSet<Client> Cients { get; set; }
-        public DbSet<Abonement> Abonement { get; set; }
+        public DbSet<Abonement> Abonements { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Phone> Phones { get; set; }
+        public DbSet<UserInfo> UsersInfo { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder optionsBuilder)
         {
@@ -26,6 +27,7 @@ namespace DbFitness.Context
             optionsBuilder.Configurations.Add(new AbonementConfig());
             optionsBuilder.Configurations.Add(new PhoneConfig());
             optionsBuilder.Configurations.Add(new AddressConfig());
+            optionsBuilder.Configurations.Add(new UserInfoConfig());
         }
     }
 }

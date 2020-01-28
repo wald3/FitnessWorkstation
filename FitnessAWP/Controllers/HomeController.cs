@@ -22,9 +22,9 @@ namespace FitnessAWP.Controllers
                         {
                             
                             System.Diagnostics.Debug.WriteLine($"Id: {c.Id}, " +
-                                                               $"Name: {c.FirstName}, " +
-                                                               $"Surname: {c.SecondName}, " +
-                                                               $"Address: [{c.Address.Country}, {c.Address.StreetName}], " +
+                                                               $"Name: {c.UserInfo.FirstName}, " +
+                                                               $"Surname: {c.UserInfo.SecondName}, " +
+                                                               $"Address: [{c.UserInfo.Address.Country}, {c.UserInfo.Address.StreetName}], " +
                                                                $"Abon: [{c.Abonement.Type} - {c.Abonement.Price}]");
                         }
                     }
@@ -36,8 +36,6 @@ namespace FitnessAWP.Controllers
                         e = e.InnerException;
                         System.Diagnostics.Debug.WriteLine("INNER: " + e.Message + "\n\n");
                     }
-                    
-                    //System.Diagnostics.Debug.WriteLine(e.Message);
                     throw;
                 }
 

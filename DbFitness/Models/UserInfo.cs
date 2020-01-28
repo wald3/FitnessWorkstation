@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class User : Table
+    public class UserInfo : Table
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }

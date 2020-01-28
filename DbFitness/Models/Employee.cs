@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class Employee : User
+    public class Employee : Table
     {
         public int Salary { get; set; }
-        public DateTime EnrollmentDate { get; set; }
+        public DateTime? EnrollmentDate { get; set; }
         public DateTime? LastPayoutDate { get; set; }
         public Position Position { get; set; }
+        public UserInfo UserInfo { get; set; }
         public int? ClubId { get; set; }
         public virtual Club Club { get; set; }
     }

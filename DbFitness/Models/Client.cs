@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class Client : User
+    public class Client : Table
     {
-        public DateTime RegistrationDate { get; set; }
+        public DateTime? RegistrationDate { get; set; }
         public Abonement Abonement { get; set; }
+        public UserInfo UserInfo { get; set; }
         public int? ClubId { get; set; }
         public virtual Club Club { get; set; }
     }
