@@ -8,13 +8,15 @@ namespace DbFitness.Models
 {
     public class Club : Table
     {
-        public string ClubName { get; set; }
+        public string Name { get; set; }
         public virtual Address Address { get; set; }
-        public ICollection<Person> Persons { get; set; }
+        public ICollection<Client> Clients { get; set; }
+        public ICollection<Employee> Employees { get; set; }
 
         public Club()
         {
-            Persons = new List<Person>();
+            Clients   = new List<Client>();
+            Employees = new List<Employee>();
         }
     }
 }

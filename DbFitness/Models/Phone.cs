@@ -11,7 +11,6 @@ namespace DbFitness.Models
         public int CountryCode  { get; set; }
         public int OperatorCode { get; set; }
         public int PhoneNumber  { get; set; }
-        public int? PersonInfoId { get; set; }
-        public virtual PersonInfo PersonInfo { get; set; }
+        public virtual User PhoneUser { get; set; }
     }
 }
