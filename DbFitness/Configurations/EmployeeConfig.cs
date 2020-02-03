@@ -18,8 +18,8 @@ namespace DbFitness.Configurations
             this.Property(c => c.Id).HasColumnName("employee_id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(c => c.Salary).HasColumnName("employee_salary").IsRequired();
             this.Property(c => c.Position).HasColumnName("employee_position").IsRequired();
-            this.Property(c => c.LastPayoutDate).HasColumnName("employee_last_poyout_date_utc").IsOptional().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
-            this.Property(c => c.EnrollmentDate).HasColumnName("employee_enrollment_date_utc").IsOptional().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
+            this.Property(c => c.LastPayoutDate).HasColumnName("employee_last_poyout_date_utc").IsOptional();
+            this.Property(c => c.EnrollmentDate).HasColumnName("employee_enrollment_date_utc").IsRequired();
             this.Property(c => c.ClubId).HasColumnName("employee_clud_id").IsRequired();
         }
     }

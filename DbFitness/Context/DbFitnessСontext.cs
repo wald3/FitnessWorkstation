@@ -18,6 +18,8 @@ namespace DbFitness.Context
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Phone> Phones { get; set; }
         public DbSet<UserInfo> UsersInfo { get; set; }
+        public DbSet<SportEquipment> SportEquipments { get; set; }
+        public DbSet<EquipmentInfo> EquipmentInfos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder optionsBuilder)
         {
@@ -28,6 +30,8 @@ namespace DbFitness.Context
             optionsBuilder.Configurations.Add(new PhoneConfig());
             optionsBuilder.Configurations.Add(new AddressConfig());
             optionsBuilder.Configurations.Add(new UserInfoConfig());
+            optionsBuilder.Configurations.Add(new SportEquipmentConfig());
+            optionsBuilder.Configurations.Add(new EquipmentInfoConfig());
         }
     }
 }

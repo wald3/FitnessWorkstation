@@ -168,6 +168,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\ClubsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -225,6 +226,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\View.cshtml" />
+    <Content Include="Views\Clubs\Create.cshtml" />
+    <Content Include="Views\Clubs\Delete.cshtml" />
+    <Content Include="Views\Clubs\Details.cshtml" />
+    <Content Include="Views\Clubs\Edit.cshtml" />
+    <Content Include="Views\Clubs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

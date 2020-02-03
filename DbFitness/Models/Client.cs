@@ -8,10 +8,14 @@ namespace DbFitness.Models
 {
     public class Client : Table
     {
-        public DateTime? RegistrationDate { get; set; }
+        public DateTime RegistrationDate { get; set; }
         public Abonement Abonement { get; set; }
         public UserInfo UserInfo { get; set; }
         public int? ClubId { get; set; }
         public virtual Club Club { get; set; }
+        public Client()
+        {
+            RegistrationDate = DateTime.UtcNow;
+        }
     }
 }

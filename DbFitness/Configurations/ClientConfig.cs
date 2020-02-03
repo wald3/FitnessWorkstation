@@ -18,7 +18,7 @@ namespace DbFitness.Configurations
 
             this.ToTable("clients");
             this.Property(c => c.Id).HasColumnName("client_id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(c => c.RegistrationDate).HasColumnName("client_registration_date_utc").IsOptional().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
+            this.Property(c => c.RegistrationDate).HasColumnName("client_registration_date_utc").IsRequired();
             this.Property(c => c.ClubId).HasColumnName("client_clud_id").IsRequired();
         }
     }

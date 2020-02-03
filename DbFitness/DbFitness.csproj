@@ -57,7 +57,9 @@
     <Compile Include="Configurations\ClientConfig.cs" />
     <Compile Include="Configurations\ClubConfig.cs" />
     <Compile Include="Configurations\EmployeeConfig.cs" />
+    <Compile Include="Configurations\EquipmentInfoConfig.cs" />
     <Compile Include="Configurations\PhoneConfig.cs" />
+    <Compile Include="Configurations\SportEquipmentConfig.cs" />
     <Compile Include="Configurations\UserInfoConfig.cs" />
     <Compile Include="Context\DbFitnessСontext.cs" />
     <Compile Include="Initializer\DbInitializer.cs" />
@@ -67,6 +69,8 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Club.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\SportEquipment.cs" />
+    <Compile Include="Models\EquipmentInfo.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Models\Phone.cs" />
     <Compile Include="Models\Table.cs" />

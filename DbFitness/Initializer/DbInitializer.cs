@@ -19,8 +19,7 @@ namespace DbFitness.Initializer
             {
                 new Client
                 {
-                    RegistrationDate = DateTime.UtcNow,
-                    Abonement = null,
+                    Abonement = new Abonement(AbonementType.MonthOne),
                     UserInfo = new UserInfo
                     {
                         FirstName = "Name1",
@@ -39,40 +38,37 @@ namespace DbFitness.Initializer
                             Housing = 30
                         }
                     }
-                },
-                new Client
-                {
-                    RegistrationDate = DateTime.UtcNow,
-                    Abonement = new Abonement(AbonementType.MonthOne),
-
-                    UserInfo = new UserInfo
-                    {
-                        FirstName = "Name2",
-                        SecondName = "Surname2",
-                        Age = 20,
-                        Phone = new Phone
-                        {
-                            CountryCode = 375,
-                            OperatorCode = 29,
-                            PhoneNumber = 9876543
-                        },
-                        Address = new Address
-                        {
-                            Country = "Belarus",
-                            StreetName = "pr. Pobeditelei",
-                            Housing = 51
-                        }
-                    }
                 }
+                //},
+                //new Client
+                //{
+                //    Abonement = new Abonement(AbonementType.MonthOne),
+
+                //    UserInfo = new UserInfo
+                //    {
+                //        FirstName = "Name2",
+                //        SecondName = "Surname2",
+                //        Age = 20,
+                //        Phone = new Phone
+                //        {
+                //            CountryCode = 375,
+                //            OperatorCode = 29,
+                //            PhoneNumber = 9876543
+                //        },
+                //        Address = new Address
+                //        {
+                //            Country = "Belarus",
+                //            StreetName = "pr. Pobeditelei",
+                //            Housing = 51
+                //        }
+                //    }
+                //}
             };
 
             var employees = new List<Employee>()
             {
                 new Employee
                 {
-                    EnrollmentDate = DateTime.UtcNow,
-                    LastPayoutDate = null,
-
                     UserInfo = new UserInfo
                     {
                         FirstName = "Name3",
@@ -127,12 +123,8 @@ namespace DbFitness.Initializer
             }
             catch (DbUpdateException e)
             {
-                //Add your code to inspect the inner exception and/or
-                //e.Entries here.
-                //Or just use the debugger.
-                //Added this catch (after the comments below) to make it more obvious 
-                //how this code might help this specific problem
                 System.Diagnostics.Debug.WriteLine(e.InnerException.Message);
+                throw;
             }
             catch (Exception e)
             {

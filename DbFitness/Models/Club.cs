@@ -12,6 +12,7 @@ namespace DbFitness.Models
         public virtual Address Address { get; set; }
         public ICollection<Client> Clients { get; set; }
         public ICollection<Employee> Employees { get; set; }
+        public ICollection<SportEquipment> SportEquipments { get; set; }
 
         public Club()
         {

@@ -16,6 +16,10 @@ namespace DbFitness.Configurations
                 .WithRequired(e => e.Club)
                 .HasForeignKey(e => e.ClubId);
 
+            this.HasMany<SportEquipment>(c => c.SportEquipments)
+                .WithRequired(e => e.Club)
+                .HasForeignKey(e => e.ClubId);
+
             this.HasOptional(c => c.Address);
 
             this.ToTable("club");

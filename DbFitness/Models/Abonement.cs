@@ -9,12 +9,14 @@ namespace DbFitness.Models
     public class Abonement : Table
     {
         private readonly int PriceForOneVisit = 5;
-        public DateTime? PurchaseDate { get; set; }
+        public DateTime PurchaseDate { get; set; }
         public int Price { get; set; }
         public bool isActive { get; set; }
         public AbonementType Type { get; set; }
+        public Abonement() { }
         public Abonement(AbonementType t)
         {
+            Type = t;
             PurchaseDate = DateTime.UtcNow;
             Price = (int)t * PriceForOneVisit;
             isActive = true;
