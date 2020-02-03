@@ -1,17 +1,23 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class Club
+    public class Club : Table
     {
-        [Key]
-        public int Id { get; set; }
-        public int PriceForOneVisit { get; set; }
-        public virtual Adress Adress { get; set; }
+        public string Name { get; set; }
+        public virtual Address Address { get; set; }
+        public ICollection<Client> Clients { get; set; }
+        public ICollection<Employee> Employees { get; set; }
+        public ICollection<SportEquipment> SportEquipments { get; set; }
 
-        // One-To-Many relations
-        public virtual ICollection<SportEquipment> Equipments { get; set; }
-        public virtual ICollection<Client> Clients { get; set; }
+        public Club()
+        {
+            Clients   = new List<Client>();
+            Employees = new List<Employee>();
+        }
     }
 }

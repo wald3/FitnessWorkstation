@@ -1,15 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class EquipmentInfo
+    public class EquipmentInfo : Table
     {
-        [Key]
-        public int Id { get; set; }
-        public string EquipmentProducer { get; set; }
-        public string EquipmentName { get; set; }
-        public string EquipmentUseRules { get; set; }
-        public string EquipmentPurpose { get; set; }
-        public SportEquipment Equipment { get; set; }
+        public string UseRules { get; set; }
+        public string Purpose { get; set; }
+        public ICollection<SportEquipment> SportEquipments { get; set; }
     }
 }

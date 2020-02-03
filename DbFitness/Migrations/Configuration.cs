@@ -5,14 +5,14 @@ namespace DbFitness.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DbFitness.DbFitnessСontext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DbFitness.Context.DbFitnessСontext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(DbFitness.DbFitnessСontext context)
+        protected override void Seed(DbFitness.Context.DbFitnessСontext context)
         {
             //  This method will be called after migrating to the latest version.
 

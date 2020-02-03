@@ -1,17 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class Client
+    public class Client : Table
     {
-        [Key]
-        public int Id { get; set; }
-        public bool IsActive { get; set; }
-        public PersonInfo Bio { get; set; }
+        public DateTime RegistrationDate { get; set; }
         public Abonement Abonement { get; set; }
-
-        // One-To-Many relation
-        public int ClubId { get; set; }
-        public Club Club { get; set; }
+        public UserInfo UserInfo { get; set; }
+        public int? ClubId { get; set; }
+        public virtual Club Club { get; set; }
+        public Client()
+        {
+            RegistrationDate = DateTime.UtcNow;
+        }
     }
 }

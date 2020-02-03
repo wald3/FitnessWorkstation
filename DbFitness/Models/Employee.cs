@@ -1,16 +1,29 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DbFitness.Models
 {
-    public class Employee
+    public class Employee : Table
     {
-        [Key]
-        public int Id { get; set; }
+        public int Salary { get; set; }
         public DateTime EnrollmentDate { get; set; }
-        public DateTime LastPayoutDate { get; set; }
-        public DateTime LastVacationDate { get; set; }
-        public PersonInfo Bio { get; set; }
+        public DateTime? LastPayoutDate { get; set; }
         public Position Position { get; set; }
+        public UserInfo UserInfo { get; set; }
+        public int? ClubId { get; set; }
+        public virtual Club Club { get; set; }
+        public Employee()
+        {
+            EnrollmentDate = DateTime.UtcNow;
+        }
+    }
+    public enum Position
+    {
+        Cleaner,
+        Administrator,
+        Trainer
     }
 }

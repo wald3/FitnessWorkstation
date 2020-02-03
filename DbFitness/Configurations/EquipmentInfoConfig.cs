@@ -2,19 +2,20 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
+
 namespace DbFitness.Configurations
 {
     class EquipmentInfoConfig : EntityTypeConfiguration<EquipmentInfo>
     {
         public EquipmentInfoConfig()
         {
-            this.ToTable("tbl_equipmentInfos").HasKey(e => e.Id);
-            this.Property(e => e.Id).HasColumnName("cln_equipmentInfo_id")
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(e => e.EquipmentName).HasColumnName("cln_equipmentInfo_name");
-            this.Property(e => e.EquipmentProducer).HasColumnName("cln_equipmentInfo_producer");
-            this.Property(e => e.EquipmentPurpose).HasColumnName("cln_equipmentInfo_purpose");
-            this.Property(e => e.EquipmentUseRules).HasColumnName("cln_equipmentInfo_rules");
+            this.HasMany(se => se.SportEquipments)
+                .WithMany(ei => ei.EquipmentInfos);
+
+            this.ToTable("sport_equipment_infos");
+            this.Property(c => c.Id).HasColumnName("sport_equipment_info_id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(c => c.UseRules).HasColumnName("sport_equipment_info_usage_rules").IsRequired();
+            this.Property(c => c.Purpose).HasColumnName("sport_equipment_info_purpose").IsRequired();
         }
     }
 }

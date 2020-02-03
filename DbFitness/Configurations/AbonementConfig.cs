@@ -4,16 +4,16 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace DbFitness.Configurations
 {
-    public class AbonementConfig : EntityTypeConfiguration<Abonement>
+    class AbonementConfig : EntityTypeConfiguration<Abonement>
     {
         public AbonementConfig()
         {
-            this.ToTable("tbl_abonements").HasKey(a => a.ClientId);
-            this.Property(a => a.ClientId).HasColumnName("cln_abonement_clientId")
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(a => a.Price).HasColumnName("cln_abonement_price").IsRequired();
-            this.Property(a => a.PurchaseDate).HasColumnName("cln_abonement_purchaseDate").IsRequired();
-            this.Property(a => a.Status).HasColumnName("cln_abonement_status").IsRequired();
+            this.ToTable("abonement");
+            this.Property(c => c.Id).HasColumnName("abonement_id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(c => c.isActive).HasColumnName("abonement_is_active").IsRequired();
+            this.Property(c => c.Price).HasColumnName("abonement_price").IsRequired();
+            this.Property(c => c.PurchaseDate).HasColumnName("abonement_purchase_date_utc").IsOptional();
+            this.Property(c => c.Type).HasColumnName("abonement_type").IsRequired();
         }
     }
 }

@@ -8,13 +8,13 @@ namespace DbFitness.Configurations
     {
         public PhoneConfig()
         {
-            this.ToTable("tbl_phones").HasKey(p => p.Id);
-            this.Property(p => p.Id).HasColumnName("cln_phone_id")
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.PhoneOperator).HasColumnName("cln_phone_phoneOperator").HasMaxLength(50);
-            this.Property(p => p.CountryCode).HasColumnName("cln_phone_countryCode");
-            this.Property(p => p.PhoneCode).HasColumnName("cln_phone_phoneCode");
-            this.Property(p => p.PhoneNumber).HasColumnName("cln_phone_phoneNumber");
+            //this.HasRequired<UserInfo>(p => p.PhoneUser);
+
+            this.ToTable("phone");
+            this.Property(c => c.Id).HasColumnName("phone_id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(c => c.CountryCode).HasColumnName("phone_country_code").IsRequired();
+            this.Property(c => c.OperatorCode).HasColumnName("phone_operator_code").IsRequired();
+            this.Property(c => c.PhoneNumber).HasColumnName("phone_phone_number").IsRequired();
         }
     }
 }
